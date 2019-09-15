@@ -1,9 +1,9 @@
 <#
     .NOTES
     --------------------------------------------------------------------------------
-     Script: 			 EmailStoppedServices.ps1
-     Created on: 	     12/05/2019 12:00 PM
-     Author:    		 Dillon Sykes
+     Script:        EmailStoppedServices.ps1
+     Created on:    12/05/2019 12:00 PM
+     Author:        Dillon Sykes
     --------------------------------------------------------------------------------
     .DESCRIPTION
         This script will start all services set to "Automatic" or "Automatic (Delayed start)" that are in a "Stopped" state.

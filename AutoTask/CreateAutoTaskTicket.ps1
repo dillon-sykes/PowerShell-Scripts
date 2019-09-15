@@ -1,9 +1,9 @@
 ﻿<#
     .NOTES
     --------------------------------------------------------------------------------
-     Script: 			 CreateAutoTaskTicket.ps1
-     Created on: 	     24/06/2019 12:00 PM
-     Author:    		 Dillon Sykes
+     Script:        CreateAutoTaskTicket.ps1
+     Created on:    24/06/2019 12:00 PM
+     Author:        Dillon Sykes
     --------------------------------------------------------------------------------
     .DESCRIPTION
         This script automates creating tickets in AutoTask by using an AutoTask PowerShell module and the AutoTask API.
