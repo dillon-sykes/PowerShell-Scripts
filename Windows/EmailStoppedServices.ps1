@@ -7,7 +7,7 @@
     --------------------------------------------------------------------------------
     .DESCRIPTION
         This script will start all services set to "Automatic" or "Automatic (Delayed start)" that are in a "Stopped" state.
-		After attempting to start these services, the script will email the services that failed to start.
+        After attempting to start these services, the script will email the services that failed to start.
 #>
 
 $Client="Client Name"
