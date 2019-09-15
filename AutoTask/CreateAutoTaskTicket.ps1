@@ -9,7 +9,7 @@
         This script automates creating tickets in AutoTask by using an AutoTask PowerShell module and the AutoTask API.
         After creating a ticket the script will then add a time entry and complete the ticket.
     
-    .REQUIREMENTS
+    .NOTES
         This script requires the following: 
         - The AutoTask module, download here: https://www.powershellgallery.com/packages/Autotask
         - AutoTask credentials
