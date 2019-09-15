@@ -12,9 +12,9 @@
     github.com/dillon-sykes
 	
     # Requirements
-    - PowerShell AutoTask module, download here: https://www.powershellgallery.com/packages/Autotask
-    - AutoTask credentials
-    - AutoTask API key
+        - PowerShell AutoTask module, download here: https://www.powershellgallery.com/packages/Autotask
+        - AutoTask credentials
+        - AutoTask API key
     
     VERSION HISTORY
         1.0 | 24/06/2019 | Dillon Sykes (dillonsykes.com)
