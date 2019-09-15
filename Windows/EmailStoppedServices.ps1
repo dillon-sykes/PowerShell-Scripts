@@ -1,13 +1,19 @@
 <#
-    .NOTES
-    --------------------------------------------------------------------------------
-     Script:        EmailStoppedServices.ps1
-     Created on:    12/05/2019 12:00 PM
-     Author:        Dillon Sykes
-    --------------------------------------------------------------------------------
-    .DESCRIPTION
-        This script will start all services set to "Automatic" or "Automatic (Delayed start)" that are in a "Stopped" state.
-        After attempting to start these services, the script will email the services that failed to start.
+.SYNOPSIS
+    Attempt to start all services set to "Automatic" that are in a "Stopped" state. Send an email with the services that failed to start.
+	
+.DESCRIPTION
+    This script will start all services set to "Automatic" or "Automatic (Delayed start)" that are in a "Stopped" state.
+    After attempting to start these services, the script will email the services that failed to start.
+    
+.NOTES
+    Dillon Sykes
+    dillonsykes.com
+    github.com/dillon-sykes
+	
+    VERSION HISTORY
+        1.0 | 12/05/2019 | Dillon Sykes (dillonsykes.com)
+            Initial version
 #>
 
 $Client="Client Name"
