@@ -1,19 +1,24 @@
 ﻿<#
-    .NOTES
-    --------------------------------------------------------------------------------
-     Script:        CreateAutoTaskTicket.ps1
-     Created on:    24/06/2019 12:00 PM
-     Author:        Dillon Sykes
-    --------------------------------------------------------------------------------
-    .DESCRIPTION
-        This script automates creating tickets in AutoTask by using an AutoTask PowerShell module and the AutoTask API.
-        After creating a ticket the script will then add a time entry and complete the ticket.
+.SYNOPSIS
+    Script to automate the process of creating a ticket, adding a time entry and completing the ticket.
+	
+.DESCRIPTION
+    This script automates creating tickets in AutoTask by using an AutoTask PowerShell module and the AutoTask API.
+    After creating a ticket the script will then add a time entry and complete the ticket.
     
-    .NOTES
-        This script requires the following: 
-        - The AutoTask module, download here: https://www.powershellgallery.com/packages/Autotask
-        - AutoTask credentials
-        - AutoTask API key
+.NOTES
+    Dillon Sykes
+    dillonsykes.com
+    github.com/dillon-sykes
+	
+    # Requirements
+    - PowerShell AutoTask module, download here: https://www.powershellgallery.com/packages/Autotask
+	- AutoTask credentials
+	- AutoTask API key
+	
+    VERSION HISTORY
+        1.0 | 24/06/2019 | Dillon Sykes (dillonsykes.com)
+            Initial version
 #>
 
 # Import the AutoTask module
