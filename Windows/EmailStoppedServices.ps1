@@ -13,11 +13,11 @@
 $Client="Client Name"
 
 # Email parameters
-		$From = "youremail@email.com"
-		$To = "recipient@gmail.com"
-		$SMTPServer = "smtp.emailserver.com"
-		$Body = "Starting the following services on: ""$($env:computername)""`n"
-		$Subject = " Service Status for $Client $($env:computername) "
+	$From = "youremail@email.com"
+	$To = "recipient@gmail.com"
+	$SMTPServer = "smtp.emailserver.com"
+	$Body = "Starting the following services on: ""$($env:computername)""`n"
+	$Subject = " Service Status for $Client $($env:computername) "
 
 # Start all "Automatic" and "Automatic (Delayed start)" services that are in a "Stopped" state
 Get-Service | Select-Object -Property Name,Status,StartType | Where-Object {$_.Status -eq "Stopped" -and $_.StartType -eq "Automatic"} | Start-Service
