@@ -12,10 +12,10 @@
 #>
 
 # User to copy groups from
-$CopyFromUser = 'test1'
+$CopyFromUser = 'user1'
 
 # User to copy groups to
-$CopyToUser = 'test'
+$CopyToUser = 'user2'
 
 $GetGroups = Get-ADUser $CopyFromUser -prop MemberOf
 $CopyGroups = Get-ADUser $CopyToUser -prop MemberOf
