@@ -16,3 +16,9 @@ if (Test-Path C:\Users\*\AppData\Local\slack\slack.exe)
 {Kill -Name slack -force;
 (Get-ItemProperty C:\Users\*\AppData\Local\slack).FullName | Foreach-Object {Start-Process $_\Update.exe -ArgumentList "-uninstall -s" -PassThru -Wait}
 }
+
+Write-Output "Now removing all Slack shortcuts..."
+if (Test-Path C:\Users\*\Desktop\slack.lnk)
+{Kill -Name notepad -force;
+(Get-ItemProperty C:\Users\*\Desktop).FullName | Foreach-Object {Remove-Item $_\Slack.lnk -Force}
+}
