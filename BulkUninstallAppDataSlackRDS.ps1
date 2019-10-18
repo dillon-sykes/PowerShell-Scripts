@@ -12,12 +12,12 @@
     github.com/dillon-sykes
 #>
 
-if (Test-Path C:\Users\*\AppData\Local\slack\slack.exe)
-{Kill -Name slack -force;
-(Get-ItemProperty C:\Users\*\AppData\Local\slack).FullName | Foreach-Object {Start-Process $_\Update.exe -ArgumentList "-uninstall -s" -PassThru -Wait}
+if (Test-Path C:\Users\*\AppData\Local\slack\slack.exe){
+    Kill -Name slack -force;
+    (Get-ItemProperty C:\Users\*\AppData\Local\slack).FullName | Foreach-Object {Start-Process $_\Update.exe -ArgumentList "-uninstall -s" -PassThru -Wait}
 }
 
 Write-Output "Now removing all Slack shortcuts..."
-if (Test-Path C:\Users\*\Desktop\slack.lnk)
-{(Get-ItemProperty C:\Users\*\Desktop).FullName | Foreach-Object {Remove-Item $_\Slack.lnk -Force}
+if (Test-Path C:\Users\*\Desktop\slack.lnk){
+    (Get-ItemProperty C:\Users\*\Desktop).FullName | Foreach-Object {Remove-Item $_\Slack.lnk -Force}
 }
