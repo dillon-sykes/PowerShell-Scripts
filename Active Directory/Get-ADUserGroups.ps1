@@ -13,7 +13,10 @@
 
 $User = read-host -Prompt "Enter username"
 $UserDN = (Get-ADUser $user).Name
+
 "User " + $UserDN + " is a member of the following groups:"
 foreach ($Group in Get-ADGroup -Filter *){
-if ((Get-ADGroupMember $Group.Name | Select-Object -expand Name) -contains $UserDN){$Group.Name}
+    if ((Get-ADGroupMember $Group.Name | Select-Object -expand Name) -contains $UserDN){
+	    $Group.Name
+	}
 }
