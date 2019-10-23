@@ -12,12 +12,13 @@
     github.com/dillon-sykes
 #>
 
+Write-Output "Uninstalling all instances of Slack.."
 if (Test-Path C:\Users\*\AppData\Local\slack\slack.exe){
     Kill -Name slack -force;
     (Get-ItemProperty C:\Users\*\AppData\Local\slack).FullName | Foreach-Object {Start-Process $_\Update.exe -ArgumentList "-uninstall -s" -PassThru -Wait}
 }
 
-Write-Output "Now removing all Slack shortcuts..."
+Write-Output "Removing all Slack shortcuts.."
 if (Test-Path C:\Users\*\Desktop\slack.lnk){
     (Get-ItemProperty C:\Users\*\Desktop).FullName | Foreach-Object {Remove-Item $_\Slack.lnk -Force}
-}
+} else { Write-Output "Shortcut does not exist!" }
