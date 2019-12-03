@@ -3,8 +3,8 @@
     Prank users with a fake blue screen of death.
     
 .DESCRIPTION
-    This script replicates the appearance of a blue screen of death, this is an error screen displayed on a
-	Windows computer system following a fatal system error.
+    Running this script will replicate the appearance of a blue screen of death.
+    This is an error screen displayed on a Windows computer system following a fatal system error.
 #>
 
 $Text = @'
