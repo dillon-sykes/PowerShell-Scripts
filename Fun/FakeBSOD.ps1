@@ -5,6 +5,10 @@
 .DESCRIPTION
     Running this script will replicate the appearance of a blue screen of death.
     This is an error screen displayed on a Windows computer system following a fatal system error.
+    
+.NOTES
+    Execute this script straight from GitHub:
+    powershell "IEX(New-Object Net.WebClient).downloadString('https://raw.githubusercontent.com/dillon-sykes/PowerShell-Scripts/master/Fun/FakeBSOD.ps1')"
 #>
 
 $Text = @'
