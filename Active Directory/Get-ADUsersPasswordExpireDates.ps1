@@ -4,7 +4,7 @@
     
 .DESCRIPTION
     This script will report the expiry date and time of all Active Directory users with passwords set to expire.
-	Users who have passwords set to never expire will not be reported on.
+    Users who have passwords set to never expire will not be reported on.
     
 .NOTES
     Dillon Sykes
