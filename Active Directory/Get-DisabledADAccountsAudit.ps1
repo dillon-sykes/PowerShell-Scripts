@@ -11,8 +11,8 @@
     dillonsykes.com
     github.com/dillon-sykes
 	
-	# Requirements
-        This script needs to be run as an administrator
+    # Requirements
+        - This script needs to be run as an administrator
 	
     VERSION HISTORY
         1.0 | 05/04/2019 | Dillon Sykes (dillonsykes.com)
