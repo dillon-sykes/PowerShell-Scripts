@@ -22,9 +22,9 @@
 param (
     [string]$Domain = $env:userdnsdomain,
     [Parameter(Mandatory)]
-    [string]$StartDate = $(throw "-StartDate is required."),
+    [string]$StartDate,
     [Parameter(Mandatory)]
-    [string]$EndDate = $(throw "-EndDate is required.")
+    [string]$EndDate
 )
 
 Get-WinEvent -ComputerName $Domain -FilterHashtable @{ LogName = "Security"; StartTime = $StartDate ; EndTime = $EndDate ; ID = 4725 } | fl
