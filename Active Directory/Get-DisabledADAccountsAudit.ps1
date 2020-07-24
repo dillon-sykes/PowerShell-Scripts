@@ -19,9 +19,12 @@
             Initial version
 #>
 
-# Variables
-$Domain = dc.examplecompany.local
-$StartDate = "21/09/2019"
-$EndDate = "27/09/2019"
+param (
+    [string]$Domain = $env:userdnsdomain,
+    [Parameter(Mandatory)]
+    [string]$StartDate = $(throw "-StartDate is required."),
+    [Parameter(Mandatory)]
+    [string]$EndDate = $(throw "-EndDate is required.")
+)
 
 Get-WinEvent -ComputerName $Domain -FilterHashtable @{ LogName = "Security"; StartTime = $StartDate ; EndTime = $EndDate ; ID = 4725 } | fl
