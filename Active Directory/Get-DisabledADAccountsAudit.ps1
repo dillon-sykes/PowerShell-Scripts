@@ -5,6 +5,10 @@
 .DESCRIPTION
     This script uses RPC to retrieve any occurrances of an event where a user account was disabled on an Active Directory server. 
     Information on who made this change and at what time is reported.
+	
+.EXAMPLE
+    This script uses RPC to retrieve any occurrances of an event where a user account was disabled on an Active Directory server. 
+    Information on who made this change and at what time is reported.
     
 .NOTES
     Dillon Sykes
@@ -19,12 +23,14 @@
             Initial version
 #>
 
-param (
-    [string]$Domain = $env:userdnsdomain,
-    [Parameter(Mandatory)]
-    [string]$StartDate,
-    [Parameter(Mandatory)]
-    [string]$EndDate
-)
+function Get-DisabledADAccounts {
+	param (
+		[string]$Domain = $env:userdnsdomain,
+		[Parameter(Mandatory)]
+		[string]$StartDate,
+		[Parameter(Mandatory)]
+		[string]$EndDate
+	)
 
-Get-WinEvent -ComputerName $Domain -FilterHashtable @{ LogName = "Security"; StartTime = $StartDate ; EndTime = $EndDate ; ID = 4725 } | fl
+	Get-WinEvent -ComputerName $Domain -FilterHashtable @{ LogName = "Security"; StartTime = $StartDate ; EndTime = $EndDate ; ID = 4725 } | fl
+}
