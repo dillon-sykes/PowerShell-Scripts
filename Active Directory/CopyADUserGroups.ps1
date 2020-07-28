@@ -11,12 +11,15 @@
     github.com/dillon-sykes
 #>
 
-# User to copy groups from
-$CopyFromUser = 'user1'
+function Copy-ADUserGroups {
+	param (
+		[Parameter(Mandatory)]
+		[string]$CopyFrom,
+		[Parameter(Mandatory)]
+		[string]$CopyTo
+	)
 
-# User to copy groups to
-$CopyToUser = 'user2'
-
-$GetGroups = Get-ADUser $CopyFromUser -prop MemberOf
-$CopyGroups = Get-ADUser $CopyToUser -prop MemberOf
-$GetGroups.MemberOf | Where {$CopyGroups.MemberOf -notcontains $_} | Add-ADGroupMember -Members $CopyGroups
+	$GetGroups = Get-ADUser $CopyFrom -prop MemberOf
+	$CopyGroups = Get-ADUser $CopyTo -prop MemberOf
+	$GetGroups.MemberOf | Where {$CopyGroups.MemberOf -notcontains $_} | Add-ADGroupMember -Members $CopyGroups
+}
