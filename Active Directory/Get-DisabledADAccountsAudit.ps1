@@ -6,10 +6,6 @@
     This script uses RPC to retrieve any occurrances of an event where a user account was disabled on an Active Directory server. 
     Information on who made this change and at what time is reported.
 	
-.EXAMPLE
-    This script uses RPC to retrieve any occurrances of an event where a user account was disabled on an Active Directory server. 
-    Information on who made this change and at what time is reported.
-    
 .NOTES
     Dillon Sykes
     dillonsykes.com
