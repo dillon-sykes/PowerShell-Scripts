@@ -1,14 +1,17 @@
 <#
 .SYNOPSIS
-    This script will copy all groups from one user and add to another user.
+    This function will copy all groups from one user to another.
     
 .DESCRIPTION
-    This script will copy all groups from one user to another user, while leaving the existing groups intact.
+    This function will copy all groups from one user to another user, while leaving the existing groups intact.
     
 .NOTES
     Dillon Sykes
     dillonsykes.com
     github.com/dillon-sykes
+	
+    # Requirements
+        - This function needs to be run as an administrator
 #>
 
 function Copy-ADUserGroups {
