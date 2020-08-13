@@ -15,6 +15,7 @@
 #>
 
 function Copy-ADUserGroups {
+	[CmdletBinding()]
 	param (
 		[Parameter(Mandatory)]
 		[string]$CopyFrom,
