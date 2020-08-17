@@ -4,10 +4,10 @@
 
 .EXAMPLE
     Get list of calendar permissions for a specified mailbox:
-        Get-UserCalendarPermissions -Mailbox john.doe@contoso.com
+        Get-MailboxCalendarPermissions -Mailbox john.doe@contoso.com
 
     Get list of permissions a user has on a specified mailbox:
-        Get-UserCalendarPermissions -Mailbox john.doe@contoso.com -User jane.doe@contoso.com
+        Get-MailboxCalendarPermissions -Mailbox john.doe@contoso.com -User jane.doe@contoso.com
 
 .NOTES
     Dillon Sykes
@@ -15,7 +15,7 @@
     github.com/dillon-sykes
 #>
 
-function Get-UserCalendarPermissions {
+function Get-MailboxCalendarPermissions {
 	[CmdletBinding()]
 	param (
 		[Parameter(Mandatory)]
